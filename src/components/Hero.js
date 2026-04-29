@@ -7,7 +7,7 @@ import {
   Linkedin,
   Mail,
   ChevronRight,
-  MessageSquare
+  Calendar
 } from 'lucide-react';
 
 const Hero = ({ setView }) => {
@@ -78,16 +78,13 @@ const Hero = ({ setView }) => {
             >
               <button
                 onClick={() => {
-                  const element = document.getElementById('contact');
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                  }
+                  window.open('https://topmate.io/karthik154', '_blank', 'noopener,noreferrer');
                 }}
                 aria-label="Connect with me"
                 className="w-full sm:w-auto px-10 py-5 bg-primary text-white rounded-full text-base sm:text-lg font-bold hover:bg-opacity-90 transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-3 min-h-[56px] group"
               >
                 Let's Connect
-                <MessageSquare size={20} className="group-hover:scale-110 transition-transform" />
+                <Calendar size={20} className="group-hover:scale-110 transition-transform" />
               </button>
 
               <div className="flex gap-4">

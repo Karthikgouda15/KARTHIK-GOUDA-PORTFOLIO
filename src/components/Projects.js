@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, Github, ArrowRight, Layers } from "lucide-react";
+import { ArrowRight, Layers } from "lucide-react";
 
 const Projects = ({ setView, setSelectedProject }) => {
   const [filter, setFilter] = useState("all");

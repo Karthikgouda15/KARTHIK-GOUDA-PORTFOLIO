@@ -151,17 +151,17 @@ const Skills = () => {
         </div>
 
         {/* Floating Tech Marquee */}
-        <div className="mt-40 overflow-hidden py-12 border-y border-gray-100">
-          <div className="flex animate-marquee gap-24 whitespace-nowrap items-center opacity-30 grayscale group-hover:grayscale-0 transition-all">
-            {[...Array(2)].map((_, i) => (
+        <div className="mt-40 overflow-hidden py-12 border-y border-gray-50 flex items-center bg-white">
+          <div className="flex w-max animate-marquee space-x-12 md:space-x-24 px-6 md:px-12">
+            {[...Array(3)].map((_, i) => (
               <React.Fragment key={i}>
-                <span className="text-5xl font-display font-black text-primary uppercase italic tracking-tighter">React</span>
-                <span className="text-5xl font-display font-black text-secondary uppercase italic tracking-tighter">Next.js</span>
-                <span className="text-5xl font-display font-black text-primary uppercase italic tracking-tighter">Node.js</span>
-                <span className="text-5xl font-display font-black text-secondary uppercase italic tracking-tighter">AWS</span>
-                <span className="text-5xl font-display font-black text-primary uppercase italic tracking-tighter">Docker</span>
-                <span className="text-5xl font-display font-black text-secondary uppercase italic tracking-tighter">Kubernetes</span>
-                <span className="text-5xl font-display font-black text-primary uppercase italic tracking-tighter">TypeScript</span>
+                <span className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-gray-200 uppercase tracking-tighter">NODE.JS</span>
+                <span className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-gray-200 uppercase tracking-tighter">AZURE</span>
+                <span className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-gray-200 uppercase tracking-tighter">DOCKER</span>
+                <span className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-gray-200 uppercase tracking-tighter">KUBERNETES</span>
+                <span className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-gray-200 uppercase tracking-tighter">TYPESCRIPT</span>
+                <span className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-gray-200 uppercase tracking-tighter">REACT</span>
+                <span className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-gray-200 uppercase tracking-tighter">NEXT.JS</span>
               </React.Fragment>
             ))}
           </div>

@@ -90,7 +90,7 @@ const About = () => {
                 </p>
 
                 <p>
-                  My foundation in Data Structures & Algorithms, High-Level and Low-Level System Design, OS, DBMS, and Computer Networks is deliberate — these are the skills that separate good developers from engineers who build systems that last.
+                  I add value to teams through strong problem-solving skills, a solid foundation in Data Structures & Algorithms and System Design, and the ability to quickly learn and adapt to new technologies. I work effectively in collaborative environments and aim to deliver high-quality solutions aligned with business goals.
                 </p>
 
                 <div className="pt-10 space-y-10">
@@ -154,7 +154,7 @@ const About = () => {
                           Open Source
                         </span>
                       </div>
-                      <div className="text-gray-500 text-[10px] truncate">MERN Stack • AI & ML • Cloud Engineering</div>
+                      <div className="text-gray-500 text-[10px] truncate">MERN Stack</div>
                     </div>
                   </a>
                 </div>
