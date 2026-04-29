@@ -149,32 +149,32 @@ const Header = ({ setView }) => {
               transition={{ duration: 0.2, ease: "easeOut" }}
               className="lg:hidden bg-white border-t border-gray-100/50"
             >
-              <div className="px-6 py-8 flex flex-col gap-4">
+              <div className="px-4 py-5 flex flex-col gap-2">
                 {navItems.map((item) => (
                   <button
                     key={item.id}
                     onClick={() => handleNavClick(item.id)}
-                    className={`flex items-center gap-5 text-xl font-display font-black uppercase tracking-widest transition-all py-4 px-4 rounded-2xl ${
+                    className={`flex items-center gap-4 text-sm font-display font-black uppercase tracking-widest transition-all py-3 px-4 rounded-xl ${
                       activeSection === item.id 
                         ? 'bg-slate-50 text-secondary' 
-                        : 'text-primary/60 hover:bg-slate-50'
+                        : 'text-primary/70 hover:bg-slate-50'
                     }`}
                   >
-                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors ${
-                      activeSection === item.id ? 'bg-secondary text-white shadow-lg shadow-secondary/20' : 'bg-white border border-gray-100 text-primary/30'
+                    <div className={`w-8 h-8 rounded-lg flex items-center justify-center transition-colors ${
+                      activeSection === item.id ? 'bg-secondary text-white shadow-md shadow-secondary/20' : 'bg-white border border-gray-100 text-primary/40'
                     }`}>
-                      <item.icon size={20} strokeWidth={2.5} />
+                      <item.icon size={16} strokeWidth={2.5} />
                     </div>
                     {item.name}
                   </button>
                 ))}
                 
-                <div className="pt-6 border-t border-gray-50 mt-4">
+                <div className="pt-4 border-t border-gray-50 mt-2">
                   <button 
                     onClick={() => setView('resume')}
-                    className="w-full py-5 bg-gradient-to-r from-secondary to-blue-600 text-white rounded-2xl font-black uppercase tracking-[0.2em] flex items-center justify-center gap-3 shadow-xl shadow-secondary/20 hover:scale-[1.02] active:scale-[0.98] transition-all min-h-[56px]"
+                    className="w-full py-3.5 bg-gradient-to-r from-secondary to-blue-600 text-white rounded-xl text-sm font-black uppercase tracking-widest flex items-center justify-center gap-2 shadow-lg shadow-secondary/20 hover:scale-[1.02] active:scale-[0.98] transition-all min-h-[48px]"
                   >
-                    <FileText size={20} strokeWidth={2.5} />
+                    <FileText size={16} strokeWidth={2.5} />
                     View Resume
                   </button>
                 </div>

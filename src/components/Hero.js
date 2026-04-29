@@ -128,14 +128,14 @@ const Hero = ({ setView }) => {
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -bottom-4 -left-4 bg-white p-4 rounded-2xl shadow-xl border border-gray-50 flex items-center gap-3 hidden md:flex"
+                className="absolute -bottom-2 left-0 sm:-bottom-4 sm:-left-4 bg-white p-3 sm:p-4 rounded-2xl shadow-xl border border-gray-50 flex items-center gap-3 z-10 scale-[0.80] sm:scale-100 origin-bottom-left"
               >
-                <div className="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center text-secondary">
+                <div className="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center text-secondary shrink-0">
                   <Sparkles size={18} />
                 </div>
                 <div>
                   <div className="text-[8px] text-gray-400 uppercase tracking-widest font-bold">Expertise</div>
-                  <div className="text-xs font-black text-primary">Full Stack Developer</div>
+                  <div className="text-xs font-black text-primary whitespace-nowrap">Full Stack Developer</div>
                 </div>
               </motion.div>
             </motion.div>

@@ -6,10 +6,12 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
+import ProjectDetails from './components/ProjectDetails';
 import './App.css';
 
 const App = () => {
   const [view, setView] = React.useState('portfolio');
+  const [selectedProject, setSelectedProject] = React.useState(null);
 
   React.useEffect(() => {
     // Ensure body matches the theme
@@ -25,7 +27,7 @@ const App = () => {
             <Hero setView={setView} />
             <About />
             <Skills />
-            <Projects />
+            <Projects setView={setView} setSelectedProject={setSelectedProject} />
             <Contact />
           </main>
           
@@ -63,6 +65,23 @@ const App = () => {
             </div>
           </footer>
         </>
+      ) : view === 'project' && selectedProject ? (
+        <div className="min-h-screen bg-white">
+          <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-xl z-50 border-b border-gray-100 p-6 shadow-sm">
+            <div className="container mx-auto flex justify-between items-center">
+              <span className="text-3xl font-display font-black text-primary uppercase italic cursor-pointer" onClick={() => setView('portfolio')}>K.<span className="text-secondary">G</span></span>
+              <button
+                onClick={() => setView('portfolio')}
+                className="px-8 py-3 rounded-full border border-gray-100 hover:border-primary transition-all text-xs font-black uppercase tracking-widest text-gray-400 hover:text-primary"
+              >
+                ← Return to Base
+              </button>
+            </div>
+          </nav>
+          <div className="pt-24">
+            <ProjectDetails project={selectedProject} />
+          </div>
+        </div>
       ) : (
         <div className="min-h-screen bg-white">
           <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-xl z-50 border-b border-gray-100 p-6 shadow-sm">
