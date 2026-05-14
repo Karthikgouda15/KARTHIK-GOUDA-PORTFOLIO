@@ -18,12 +18,12 @@ const Contact = () => {
     e.preventDefault();
     setStatus('sending');
     addLog('Initiating transmission sequence...', 'system');
-    
+
     // Simulate real-time progress
     setTimeout(() => addLog('Encrypting data packets...', 'system'), 800);
     setTimeout(() => addLog('Bypassing local firewalls...', 'warning'), 1600);
     setTimeout(() => addLog('Handshaking with remote server...', 'system'), 2400);
-    
+
     setTimeout(() => {
       setStatus('success');
       addLog('TRANSMISSION SUCCESSFUL', 'success');
@@ -51,7 +51,7 @@ const Contact = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 items-stretch">
-          
+
           {/* Left: Command Center / Terminal Aesthetic */}
           <div className="lg:w-1/2 flex flex-col">
             <div className="mb-12">
@@ -63,8 +63,8 @@ const Contact = () => {
                 <div className="h-px w-12 bg-secondary" />
                 <span className="text-secondary font-black uppercase tracking-[0.4em] text-xs">Communication Node</span>
               </motion.div>
-              
-              <motion.h2 
+
+              <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="text-5xl md:text-7xl font-display font-black text-primary mb-8 leading-none"
@@ -73,7 +73,7 @@ const Contact = () => {
               </motion.h2>
             </div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               className="flex-1 bg-primary border border-gray-800 rounded-[2.5rem] p-8 md:p-10 shadow-2xl relative overflow-hidden group flex flex-col"
@@ -106,7 +106,7 @@ const Contact = () => {
                   </div>
                 ))}
                 {status === 'sending' && (
-                  <motion.div 
+                  <motion.div
                     animate={{ opacity: [1, 0] }}
                     transition={{ repeat: Infinity, duration: 0.8 }}
                     className="w-2 h-4 bg-secondary inline-block ml-1"
@@ -137,14 +137,14 @@ const Contact = () => {
 
           {/* Right: Modern Glass Form */}
           <div className="lg:w-1/2">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               className="bg-slate-50 border border-gray-100 rounded-[3rem] p-12 md:p-16 shadow-sm relative h-full flex flex-col justify-center overflow-hidden"
             >
               <AnimatePresence mode="wait">
                 {status === 'success' ? (
-                  <motion.div 
+                  <motion.div
                     key="success"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -158,7 +158,7 @@ const Contact = () => {
                       <h3 className="text-4xl font-display font-black text-primary mb-4 italic">Transmission Sent</h3>
                       <p className="text-gray-500 max-w-sm mx-auto">Your message has been encoded and successfully delivered to the mainframe. Expect a response soon.</p>
                     </div>
-                    <button 
+                    <button
                       onClick={() => setStatus('idle')}
                       className="px-8 py-4 bg-primary text-white rounded-xl text-xs font-black uppercase tracking-widest hover:bg-secondary transition-all"
                     >
@@ -166,12 +166,12 @@ const Contact = () => {
                     </button>
                   </motion.div>
                 ) : (
-                  <motion.form 
+                  <motion.form
                     key="form"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    onSubmit={handleSubmit} 
+                    onSubmit={handleSubmit}
                     className="space-y-8"
                   >
                     <div className="mb-12">
@@ -182,18 +182,18 @@ const Contact = () => {
                     <div className="grid md:grid-cols-2 gap-8">
                       <div className="space-y-3">
                         <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-2">Identifier</label>
-                        <input 
+                        <input
                           required
-                          type="text" 
+                          type="text"
                           placeholder="Your Name"
                           className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-5 focus:border-secondary/30 transition-all outline-none text-primary font-medium"
                         />
                       </div>
                       <div className="space-y-3">
                         <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-2">Return Path</label>
-                        <input 
+                        <input
                           required
-                          type="email" 
+                          type="email"
                           placeholder="Email Address"
                           className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-5 focus:border-secondary/30 transition-all outline-none text-primary font-medium"
                         />
@@ -202,9 +202,9 @@ const Contact = () => {
 
                     <div className="space-y-3">
                       <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-2">Transmission Subject</label>
-                      <input 
+                      <input
                         required
-                        type="text" 
+                        type="text"
                         placeholder="Project Title"
                         className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-5 focus:border-secondary/30 transition-all outline-none text-primary font-medium"
                       />
@@ -212,15 +212,15 @@ const Contact = () => {
 
                     <div className="space-y-3">
                       <label className="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-2">Core Message</label>
-                      <textarea 
+                      <textarea
                         required
-                        rows="4" 
+                        rows="4"
                         placeholder="Describe the architectural requirements..."
                         className="w-full bg-white border border-gray-200 rounded-2xl px-6 py-5 focus:border-secondary/30 transition-all outline-none text-primary font-medium resize-none"
                       />
                     </div>
 
-                    <button 
+                    <button
                       disabled={status === 'sending'}
                       className="w-full group flex items-center justify-center gap-4 py-6 bg-primary text-white rounded-2xl text-xs font-black uppercase tracking-[0.2em] hover:bg-secondary hover:shadow-xl hover:shadow-secondary/20 transition-all disabled:opacity-50"
                     >

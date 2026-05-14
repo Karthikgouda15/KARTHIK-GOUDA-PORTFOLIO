@@ -24,13 +24,13 @@ const About = () => {
     {
       company: "Genesis",
       role: "Software Development Engineer (Internship)",
-      period: "Feb 2026 - Present",
+      period: "Feb 2026 - May 2026",
       location: "Bengaluru, India (Remote)"
     },
     {
       company: "Tekavach",
       role: "Full-Stack Developer · AI Platform (Internship)",
-      period: "Feb 2026 - Present",
+      period: "Feb 2026 - May 2026",
       location: "Bengaluru, India (Remote)"
     },
     {
@@ -119,7 +119,7 @@ const About = () => {
                     className="flex-1 min-w-[280px] flex items-center gap-4 p-3 bg-[#121212] rounded-[1.5rem] border border-white/5 shadow-2xl transition-all hover:scale-[1.02] hover:bg-[#1a1a1a]"
                   >
                     <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-white/20">
-                      <img src="/images/KarthikGouda.jpeg" alt="Karthik Gouda" className="w-full h-full object-cover" />
+                      <img src="/images/HeroBg.jpg" alt="Karthik Gouda" className="w-full h-full object-cover" />
                     </div>
                     <div className="min-w-0">
                       <div className="flex items-center gap-2 mb-0.5">

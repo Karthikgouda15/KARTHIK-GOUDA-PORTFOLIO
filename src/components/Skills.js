@@ -71,9 +71,9 @@ const Skills = () => {
   return (
     <section id="skills" className="relative py-24 md:py-32 bg-white overflow-hidden">
       {/* Subtle Dot Matrix Pattern */}
-      <div className="absolute inset-0 opacity-[0.05]" 
-           style={{ backgroundImage: 'radial-gradient(#0F172A 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
-      
+      <div className="absolute inset-0 opacity-[0.05]"
+        style={{ backgroundImage: 'radial-gradient(#0F172A 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
+
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mb-24">
           <motion.div
@@ -84,7 +84,7 @@ const Skills = () => {
             <div className="h-px w-12 bg-secondary" />
             <span className="text-secondary font-black uppercase tracking-[0.4em] text-xs">Expertise</span>
           </motion.div>
-          
+
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -98,7 +98,7 @@ const Skills = () => {
             transition={{ delay: 0.1 }}
             className="text-gray-500 text-xl leading-relaxed max-w-2xl"
           >
-            A systematic breakdown of my engineering capabilities across the full stack 
+            A systematic breakdown of my engineering capabilities across the full stack
             and modern cloud infrastructure.
           </motion.p>
         </div>
