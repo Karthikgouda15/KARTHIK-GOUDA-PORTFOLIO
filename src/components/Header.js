@@ -123,7 +123,7 @@ const Header = ({ setView }) => {
 
             <button
               onClick={() => setView('resume')}
-              className="ml-4 px-5 py-2 border border-white/20 hover:border-white hover:bg-white hover:text-black rounded-full text-[9px] font-bold uppercase tracking-widest transition-all"
+              className="ml-4 px-5 py-2 border border-white/20 text-white hover:border-white hover:bg-white hover:text-black rounded-full text-[10px] font-bold uppercase tracking-widest transition-all"
             >
               Resume
             </button>
