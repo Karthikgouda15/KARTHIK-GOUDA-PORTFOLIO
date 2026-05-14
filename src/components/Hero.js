@@ -26,7 +26,7 @@ const Hero = ({ setView }) => {
           className="w-full h-full object-cover"
         />
         {/* Dark Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/70 to-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/60 to-black/60" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10 text-center">
