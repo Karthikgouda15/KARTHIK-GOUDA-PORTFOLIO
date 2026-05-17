@@ -16,7 +16,7 @@ const Hero = ({ setView }) => {
     <section
       id="home"
       role="banner"
-      className="relative min-h-screen flex items-start lg:items-center justify-center pt-20 sm:pt-24 lg:pt-24 pb-16 overflow-hidden bg-white"
+      className="relative min-h-screen flex items-start lg:items-center justify-center pt-28 sm:pt-32 lg:pt-24 pb-16 overflow-hidden bg-white"
     >
       {/* Background Decorative Elements */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-slate-50/50 -skew-x-12 translate-x-20 z-0 hidden lg:block" />
