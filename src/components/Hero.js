@@ -16,7 +16,7 @@ const Hero = ({ setView }) => {
     <section
       id="home"
       role="banner"
-      className="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden bg-white"
+      className="relative min-h-screen flex items-start lg:items-center justify-center pt-20 sm:pt-24 lg:pt-24 pb-16 overflow-hidden bg-white"
     >
       {/* Background Decorative Elements */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-slate-50/50 -skew-x-12 translate-x-20 z-0 hidden lg:block" />
@@ -110,7 +110,7 @@ const Hero = ({ setView }) => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="flex-[0.8] order-1 lg:order-2 relative flex justify-center mb-10 lg:mb-0"
+            className="flex-[0.8] order-1 lg:order-2 relative flex justify-center mt-10 lg:mt-0 mb-10 lg:mb-0"
           >
             {/* Outer dotted circle */}
             <div className="absolute inset-[-20px] rounded-full border-[1px] border-dashed border-secondary/30 animate-spin" style={{ animationDuration: '25s' }} />
