@@ -7,7 +7,6 @@ import {
   Linkedin,
   Github,
   Mail,
-  ChevronRight,
   Code2
 } from 'lucide-react';
 
@@ -23,7 +22,7 @@ const Hero = ({ setView }) => {
       <div className="absolute top-1/4 left-10 w-64 h-64 bg-secondary/5 rounded-full blur-3xl z-0" />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-20">
 
           {/* Left Content */}
           <motion.div
@@ -110,7 +109,7 @@ const Hero = ({ setView }) => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="flex-[0.8] order-1 lg:order-2 relative flex justify-center mt-10 lg:mt-0 mb-10 lg:mb-0"
+            className="flex-[0.8] order-1 lg:order-2 relative flex justify-center mt-10 lg:mt-0"
           >
             {/* Outer dotted circle */}
             <div className="absolute inset-[-20px] rounded-full border-[1px] border-dashed border-secondary/30 animate-spin" style={{ animationDuration: '25s' }} />
@@ -118,7 +117,7 @@ const Hero = ({ setView }) => {
             <motion.div
               animate={{ y: [0, -15, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] rounded-full overflow-hidden shadow-[0_20px_50px_rgba(15,23,42,0.15)] border-4 border-white group"
+              className="relative w-72 h-72 sm:w-[340px] sm:h-[340px] lg:w-[420px] lg:h-[420px] rounded-full overflow-hidden shadow-[0_20px_50px_rgba(15,23,42,0.15)] border-4 border-white group"
             >
               <img
                 src="/images/KarthikGouda.jpeg"
