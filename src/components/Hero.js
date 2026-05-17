@@ -40,7 +40,7 @@ const Hero = ({ setView }) => {
               </span>
             </div>
 
-            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[100px] font-sans font-black leading-[0.95] text-primary mb-6 tracking-tighter">
+            <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[100px] font-sans font-black leading-[0.95] text-primary mb-6 tracking-tighter">
               Karthik <br className="hidden sm:block" />
               Gouda
             </h1>
@@ -110,7 +110,7 @@ const Hero = ({ setView }) => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="flex-[0.8] order-1 lg:order-2 relative flex justify-center"
+            className="flex-[0.8] order-1 lg:order-2 relative flex justify-center mb-10 lg:mb-0"
           >
             {/* Outer dotted circle */}
             <div className="absolute inset-[-20px] rounded-full border-[1px] border-dashed border-secondary/30 animate-spin" style={{ animationDuration: '25s' }} />
