@@ -75,7 +75,7 @@ const Header = ({ setView }) => {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-black/90 backdrop-blur-xl py-4 border-b border-white/5' : 'bg-transparent py-8'}`}>
+      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-white/90 backdrop-blur-xl py-4 border-b border-gray-100 shadow-sm' : 'bg-transparent py-8'}`}>
         <nav
           role="navigation"
           aria-label="Main Navigation"
@@ -90,10 +90,10 @@ const Header = ({ setView }) => {
             aria-label="Go to Home"
           >
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-white flex items-center justify-center rounded shadow-xl group-hover:rotate-12 transition-transform duration-500">
-                <span className="text-black font-display font-black text-[10px]">KG</span>
+              <div className="w-8 h-8 bg-primary flex items-center justify-center rounded shadow-sm group-hover:rotate-12 transition-transform duration-500">
+                <span className="text-white font-display font-black text-[10px]">KG</span>
               </div>
-              <span className="text-xl font-display font-bold tracking-[0.2em] text-white uppercase">
+              <span className="text-xl font-display font-bold tracking-[0.2em] text-primary uppercase">
                 K.GOUDA
               </span>
             </div>
@@ -106,16 +106,16 @@ const Header = ({ setView }) => {
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
                 aria-label={`Navigate to ${item.name}`}
-                className={`relative text-[11px] font-bold uppercase tracking-[0.25em] transition-all hover:text-white py-2 ${activeSection === item.id
-                  ? 'text-white'
-                  : 'text-white/50'
+                className={`relative text-[11px] font-bold uppercase tracking-[0.25em] transition-all hover:text-secondary py-2 ${activeSection === item.id
+                  ? 'text-secondary'
+                  : 'text-gray-500'
                   }`}
               >
                 {item.name}
                 {activeSection === item.id && (
                   <motion.div
                     layoutId="activeUnderline"
-                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-white rounded-full"
+                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-secondary rounded-full"
                   />
                 )}
               </button>
@@ -123,7 +123,7 @@ const Header = ({ setView }) => {
 
             <button
               onClick={() => setView('resume')}
-              className="ml-4 px-5 py-2 border border-white/20 text-white hover:border-white hover:bg-white hover:text-black rounded-full text-[10px] font-bold uppercase tracking-widest transition-all"
+              className="ml-4 px-6 py-2.5 border border-gray-200 text-primary hover:border-secondary hover:bg-secondary hover:text-white rounded-full text-[11px] font-bold uppercase tracking-widest transition-all shadow-sm"
             >
               Resume
             </button>
@@ -133,7 +133,7 @@ const Header = ({ setView }) => {
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white p-2"
+              className="text-primary p-2"
               aria-label="Toggle Menu"
             >
               {isMenuOpen ? <X size={28} /> : <Menu size={28} />}

@@ -113,13 +113,13 @@ const App = () => {
           </div>
         </div>
       ) : (
-        <div className="min-h-screen bg-black">
-          <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-xl z-50 border-b border-white/10 p-4 md:p-6 shadow-2xl">
+        <div className="min-h-screen bg-slate-50">
+          <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-xl z-50 border-b border-gray-100 p-4 md:p-6 shadow-sm">
             <div className="container mx-auto flex justify-between items-center">
-              <span className="text-2xl md:text-3xl font-display font-black text-white uppercase italic cursor-pointer" onClick={() => setView('portfolio')}>K.<span className="text-orange-500">G</span></span>
+              <span className="text-2xl md:text-3xl font-display font-black text-primary uppercase italic cursor-pointer" onClick={() => setView('portfolio')}>K.<span className="text-secondary">G</span></span>
               <button
                 onClick={() => setView('portfolio')}
-                className="px-6 py-2 md:px-8 md:py-3 rounded-full border border-white/10 hover:border-orange-500 transition-all text-[10px] md:text-xs font-black uppercase tracking-widest text-gray-400 hover:text-white"
+                className="px-6 py-2 md:px-8 md:py-3 rounded-full border border-gray-200 hover:border-primary transition-all text-[10px] md:text-xs font-black uppercase tracking-widest text-gray-400 hover:text-primary"
               >
                 ← Back
               </button>
